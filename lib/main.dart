@@ -1,15 +1,16 @@
-import 'dart:developer';
 import 'package:design_pattern/design_pattern/creational_pattern/prototype_pattern/flutterDeveloperModel.dart';
+import 'package:design_pattern/design_pattern/creational_pattern/singelton_pattern/FlutterDatabase.dart';
+import 'package:design_pattern/widgets/prototype_pattern_example.dart';
 import 'package:flutter/material.dart';
 
 void main() {
   //runApp(const MyApp());
 
-  FlutterDeveloperModel emp1 =
-      FlutterDeveloperModel(1, "Samuel Thomas", "Sept 2023");
+  /// Prototype usage
+  PrototypePatternExample().example();
 
-  FlutterDeveloperModel emp1Clone = emp1.clone();
-  log(emp1Clone.name);
+  /// singleton pattern usage
+  FlutterDatabase().calculateSum(5, 6);
 }
 
 /*class MyApp extends StatelessWidget {
